@@ -4,7 +4,11 @@ function inicializar() {
     insertar();
 }
 function insertar(){
-    lista=document.getElementsByTagName("li");
+    [...document.getElementsByTagName("li")].forEach(elemento=>elemento.setAttribute("type","square"));
+    let lista = [...document.getElementsByTagName("ol")][0];
+    // let antes= document.createElement("li");
+    lista.insertBefore(document.createElement("li"),[...lista.childNodes].forEach(element=>element.textContent==="BMW"))
+}
+function modificar(e){
 
-    [...lista].forEach(elemento=>elemento.)
 }

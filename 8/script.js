@@ -57,8 +57,6 @@ function ocultar(e){
                 hijo.setAttribute("style","display:none")
             }
         }
-
-
     })
 }
 const myJSON = 
