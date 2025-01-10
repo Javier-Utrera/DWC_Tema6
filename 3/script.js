@@ -4,11 +4,12 @@ function inicializar() {
     insertar();
 }
 function insertar(){
-    [...document.getElementsByTagName("li")].forEach(elemento=>elemento.setAttribute("type","square"));
-    let lista = [...document.getElementsByTagName("ol")][0];
-    // let antes= document.createElement("li");
-    lista.insertBefore(document.createElement("li"),[...lista.childNodes].forEach(element=>element.textContent==="BMW"))
-}
-function modificar(e){
 
+    let lista = [...document.getElementsByTagName("ol")][0];
+    let antes= document.createElement("li");
+    let despues= document.createElement("li");
+    var prueba= lista.childNodes;
+    lista.insertBefore(despues,prueba.find(element=>element.textContent=="BMW"));
+    lista.insertBefore(antes,prueba.find(element=>element.textContent=="BMW").nextSibling);
+    [...document.getElementsByTagName("li")].forEach(elemento=>elemento.setAttribute("type","square"));
 }
