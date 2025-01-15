@@ -17,8 +17,6 @@ function escribir(){
             columna.textContent=contador++;
             fila.appendChild(columna);         
         }
-        contador=1;
-        
-              
+        contador=1;                  
     }
 }
